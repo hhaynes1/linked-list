@@ -58,4 +58,12 @@ import LinkedList from "./linked-list.js";
     console.log('\nTO_STRING');
     console.log(linked.toString());
 
+    // insert value at index
+    console.log('\nINSERT_AT')
+    linked.insertAt('new', 2);
+    console.log(linked);
+
+    // remove node at index
+    // linked.removeAt();
+    // console.log(linked);
 })()

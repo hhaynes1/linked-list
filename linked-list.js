@@ -120,12 +120,27 @@ export default class LinkedList {
     }
 
     // insert new node with value at index
-    insertAt() {
-
+    insertAt(value, index) {
+        if (index === 0) {
+            this.prepend(value);
+            return;
+        }
+        let head = this.head;
+        let length = this.length;
+        let i = 0;
+        while (length--) {
+            if (i + 1 === index) {
+                head.nextNode = new Node(value, head.nextNode);
+                this.length += 1;
+                return;
+            }
+            head = head.nextNode;
+            i++;
+        }
     }
 
     // remove node at index
-    removeAt() {
+    removeAt(index) {
 
     }
 }
