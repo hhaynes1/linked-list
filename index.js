@@ -64,6 +64,7 @@ import LinkedList from "./linked-list.js";
     console.log(linked);
 
     // remove node at index
-    // linked.removeAt();
-    // console.log(linked);
+    console.log('\nREMOVE_AT')
+    linked.removeAt(2);
+    console.log(linked);
 })()

@@ -141,6 +141,28 @@ export default class LinkedList {
 
     // remove node at index
     removeAt(index) {
+        if (index === 0) {
+            this.head = this.head.nextNode;
+            this.length--;
+        }
 
+        if (index === 0 || index >= this.length) {
+            return;
+        }
+
+        let head = this.head;
+        let length = this.length;
+        let i = 0;
+        while (length--) {
+            if (i + 1 === index) {
+                let nodeToRemove = head.nextNode;
+                let nextNode = nodeToRemove.nextNode;
+                head.nextNode = nextNode;
+                this.length--;
+                return;
+            }
+            head = head.nextNode;
+            i++;
+        }
     }
 }
